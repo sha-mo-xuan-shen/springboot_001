@@ -1,0 +1,5 @@
+# Project exclude paths
+/mp/target/
+/mybatis/target/
+/mybatis-plus/target/
+/springboot_01_quickstart/target/
