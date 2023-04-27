@@ -1,6 +1,6 @@
 package com.mybatisplus.domain;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +10,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @TableName("user2")
 public class User {
-    private int id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
     private String name;
     private String password;
-    private int age;
+    private Integer age;
     private String tel;
+    @TableLogic(value = "0",delval = "1")
+    private Integer deleted;
+    @Version
+    private Integer version;
 }
